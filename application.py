@@ -5,7 +5,6 @@ from flask import Flask
 application = Flask(__name__)
 
 
-@app.route('/')
+@application.route('/')
 def entry():
-    return "Hello World!"
-    # return app.send_static_file('home.html')
+    return application.send_static_file('home.html')
